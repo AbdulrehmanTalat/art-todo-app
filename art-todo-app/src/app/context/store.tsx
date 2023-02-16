@@ -7,6 +7,10 @@ type DataType = {
     todoName: string
 }
 
+interface Props {
+    children: React.ReactNode;
+  }
+
 interface ContextProps {
     userId: string,
     setUserId: Dispatch<SetStateAction<string>>,
@@ -21,13 +25,13 @@ const GlobalContext = createContext<ContextProps>({
     setData: (): DataType[] => []
 })
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider = ( props: Props ) => {
     const [userId, setUserId] = useState('');
     const [data, setData] = useState<[] | DataType[]>([]);
 
     return (
         <GlobalContext.Provider value={{ userId, setUserId, data, setData }}>
-            {children}
+            {props.children}
         </GlobalContext.Provider>
     )
 }
