@@ -19,9 +19,9 @@ export default function List({ }) {
             <Box bg='#553C9A' mx={'auto'} w='80%' mt='10' p={[4, 12, 12, 12, 20, 20]}>
                 <Table bg='white' variant='striped' size={['md', 'md', 'md', 'lg', 'lg', 'lg']} overflowX='auto' whiteSpace='nowrap' >
                     <TableCaption bg={'white'}>List of Todos</TableCaption>
-                    <Thead w={['320px', '375px', '425px', '1024px', '1024px', '1024px']}>
+                    <Thead w={['320px', '375px', '425px', '1024px', '1024px', '1800px']}>
                         <Tr>
-                            <Th w={['320px', '375px', '425px', '1024px', '1024px', '1024px']}>Name</Th>
+                            <Th w={['320px', '375px', '425px', '1024px', '10000136px', '1800px']} ml={['0px,0px,0px,0px,0px,30px']}>Name</Th>
                             <Th  >Action</Th>
                         </Tr>
                     </Thead>
