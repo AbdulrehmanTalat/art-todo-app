@@ -27,7 +27,7 @@ export default function List({ }) {
                     </Thead>
                     <Tbody>
                         {data.map((item) =>
-                            <Tr>
+                            <Tr key={item.todoName}>
                                 <Td >{item.todoName}</Td>
                                 <Td textAlign='center'><Tooltip label='click to delete record' bg='#0987A0' fontSize='sm'>
                                     <DeleteIcon color='#553C9A' onClick={() => removeItem(item.todoName)} />
